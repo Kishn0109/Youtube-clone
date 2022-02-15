@@ -1,0 +1,90 @@
+@import "../../Screens/HomeScreen/base.scss";
+.Header__main {
+  height: 10vh;
+  .header_hambargerIcon {
+    display: none;
+    fill: rgb(32, 29, 29);
+    height: 3rem;
+    padding: 0rem;
+    width: 3rem;
+  }
+  > div {
+    padding: 0.5rem 0rem;
+    align-items: center;
+    .youtube-icon {
+      fill: red;
+      height: 3rem;
+      padding: 0rem;
+      width: 3rem;
+    }
+    form {
+      display: flex;
+      align-items: center;
+      border: 1px solid #867a7a;
+      flex: 0.6;
+      /* background-color: red; */
+      color: white;
+      padding: 0px 1rem;
+      border-radius: 0.3rem;
+      input {
+        background: none;
+        outline: none;
+        border: none;
+        width: 100%;
+        width: 100%;
+        color: white;
+        padding: 0.5rem;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        outline: none;
+        border: none;
+      }
+    }
+    .Header__left {
+      gap: 1rem;
+      display: flex;
+      align-items: center;
+      img {
+        width: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: $brackpoint-small) {
+  .Header__main {
+    .youtube-icon {
+      display: none;
+    }
+    div {
+      padding: 0.5rem 1rem;
+      // >2 svg > 2:not(img) {
+      //   display: none;
+      // }
+      > svg:first-child {
+        display: block;
+        border-radius: 0.5rem;
+        display: block;
+        padding: 0px;
+        background-color: rgb(83, 73, 73);
+        padding: -1px 0px;
+        height: 2rem;
+      }
+      form {
+        flex: 0.8;
+      }
+      .Header__left {
+        svg {
+          display: none;
+        }
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+$text-color: rgb(199, 207, 199);
+$black-primary:rgb(58, 53, 53);
+$black-secondary:rgb(54, 47, 47);
+$border-color: rgb(53, 45, 45);
+
+$brackpoint-medium:1224px;
+$brackpoint-small:520px;
+
+body{
+    background-color: $black-primary;
+    color: $text-color;
+    background-attachment: fixed; //The background image will not scroll with the page
+    letter-spacing:0.1px ;
+}
