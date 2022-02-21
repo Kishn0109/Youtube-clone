@@ -8,6 +8,9 @@
     padding: 0rem;
     width: 3rem;
   }
+  .Youtubelogo{
+    width: 10rem;
+  }
   > div {
     padding: 0.5rem 0rem;
     align-items: center;
@@ -60,11 +63,11 @@
     .youtube-icon {
       display: none;
     }
+    .header_hambargerIcon{
+      display: block;
+    }
     div {
       padding: 0.5rem 1rem;
-      // >2 svg > 2:not(img) {
-      //   display: none;
-      // }
       > svg:first-child {
         display: block;
         border-radius: 0.5rem;

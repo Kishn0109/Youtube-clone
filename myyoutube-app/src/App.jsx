@@ -5,15 +5,24 @@ import Header from "./components/header/Header";
 import Sidbar from "./components/sidbar/Sidbar";
 import { Container } from "react-bootstrap";
 import HomeScreen from "./Screens/HomeScreen/HomeScreen";
+import { useState } from "react";
 function App() {
+  const [toggelSidebar, settoggelsidebar] = useState(false);
+  const handeltoggelsidebar = () => {
+    console.log("call hua function ");
+    settoggelsidebar(!toggelSidebar);
+  };
   return (
     <>
-      <Header />
+      <Header toggelfunction={handeltoggelsidebar} />
       <div className="app_container">
-        <Container fluid className="app_main border-dark d-flex">
-          <Sidbar />
+        <div className="app_main border-dark d-flex p-0 w-100">
+          <Sidbar
+            toggelSidebar={toggelSidebar}
+            toggelfunction={handeltoggelsidebar}
+          />
           <HomeScreen />
-        </Container>
+        </div>
       </div>
     </>
   );

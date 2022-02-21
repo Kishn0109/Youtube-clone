@@ -6,12 +6,23 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import AppsIcon from "@material-ui/icons/Apps";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Container } from "react-bootstrap";
-function Header() {
+function Header({ toggelfunction }) {
   return (
-    <div className="Header__main border border-secondary h-10 d-flex justify-content-between">
+    <div className="Header__main bg-white border border-secondary h-10 d-flex justify-content-between">
       <Container className="d-flex justify-content-between">
-        <MenuIcon className="header_hambargerIcon" />
-        <YouTubeIcon className="youtube-icon" />
+        <span className="header_hambargerIcon" onClick={() => {
+          console.log("click to hua ")
+          toggelfunction()
+        }}>
+          <MenuIcon className="header_hambargerIcon" />
+        </span>
+
+        {/* <YouTubeIcon className="youtube-icon" /> */}
+        <img
+          className="Youtubelogo"
+          src="https://logodownload.org/wp-content/uploads/2014/10/youtube-logo-0.png"
+          alt="youtubeLogo"
+        />
         <form>
           <input type="text" placeholder="search" />
           <button>

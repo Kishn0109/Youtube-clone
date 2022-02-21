@@ -1,3 +1,52 @@
-.sidbar__main{
-    flex: 0.1;
+// import "../../Screens/HomeScreen/base.scss";
+@import "../../Screens/HomeScreen/base.scss";
+// /workspace/Youtube-clone/myyoutube-app/src/Screens/HomeScreen/base.scss
+.sidbar__main {
+  background-color: white;
+  color: black;
+  transition: transform 0.2s ease-in;
+  &.open {
+    transform: translateX(0);
+  }
+  ul {
+    padding: 0px;
+    li {
+      list-style: none;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      /* justify-content: space-around; */
+      justify-content: flex-start;
+      padding: 1rem 0.5rem;
+      gap: 1rem;
+      &:hover {
+        background-color: #000000c2;
+        transition: 1.5s ease-in-out;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media (max-width: $brackpoint-medium) {
+  .sidbar__main {
+    padding: 0.5rem;
+    li {
+      padding: 1rem;
+      span {
+        display: none;
+      }
+      &:hover {
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $brackpoint-small) {
+  .sidbar__main {
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+  }
 }

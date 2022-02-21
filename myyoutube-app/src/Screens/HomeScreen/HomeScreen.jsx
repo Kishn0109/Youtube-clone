@@ -6,7 +6,7 @@ import { Col, Row } from "react-bootstrap";
 import Video from "../../components/Video/Video";
 function HomeScreen() {
   return (
-    <div className="HomeScreen__main border border-secondary">
+    <div className="HomeScreen__main overflow-hidden border border-secondary">
       <Categories />
       <Row>
         {[...new Array(20)].map(() => (
