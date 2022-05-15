@@ -1,3 +1,11 @@
 .HomeScreen__main {
   width: 100%;
+  .column{
+    display: flex;
+    justify-content: center;
+  }
 }
+.whiteSmoke{
+  color: rgb(147, 131, 131);
+}
+

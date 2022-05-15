@@ -8,9 +8,9 @@ function HomeScreen() {
   return (
     <div className="HomeScreen__main overflow-hidden border border-secondary">
       <Categories />
-      <Row>
+      <Row style={{gridRowGap:"1rem",overflowY:"scroll",justifyContent:"center",height:"82vh"}}>
         {[...new Array(20)].map(() => (
-          <Col lg={3} md={4}>
+          <Col lg={3} md={4} className="column">
             <Video />
           </Col>
         ))}
