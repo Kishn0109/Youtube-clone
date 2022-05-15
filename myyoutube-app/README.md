@@ -1,5 +1,31 @@
 # Problem and solutions
-1)@material-ui/core
+1)@material-ui/core --installed material-ui/core seprately 
+
+
+# Steps
+1. project Set up[*]
+2. Home Screen Ui [*]
+3. React Router Setup []
+4. Redux setup []
+5. Firebase Auth []
+6. Private route []
+7. Most Popural Videos []
+8. Categories Bar []
+9. Infinite Scroll []
+10. Loading Skeleton []
+11. Lazy Load Images[]
+12. Loading Skeleton []
+13. Watch Screen []
+14. Video Player & Details []
+15. Channel Details []
+16. Comments []
+17. Related Videos []
+18. Search Screen []
+19. Subscription Screen []
+20. Video of Channel []
+21. CI/CD using github action []
+
+
 
 
 

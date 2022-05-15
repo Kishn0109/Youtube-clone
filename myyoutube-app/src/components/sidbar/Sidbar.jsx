@@ -11,7 +11,7 @@ import HomeIcon from "@material-ui/icons/Home";
 function Sidbar({ toggelSidebar, toggelfunction }) {
   return (
     <div
-      onClick={toggelfunction}
+      onClick={()=>toggelfunction()}
       className={toggelSidebar ? "sidbar__main open" : "sidbar__main"}
     >
       <ul className="d-flex flex-column justify-content-center align-items-center">

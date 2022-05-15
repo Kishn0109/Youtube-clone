@@ -9,7 +9,7 @@ import { useState } from "react";
 function App() {
   const [toggelSidebar, settoggelsidebar] = useState(false);
   const handeltoggelsidebar = () => {
-    console.log("call hua function ");
+    console.log("line 12");
     settoggelsidebar(!toggelSidebar);
   };
   return (
