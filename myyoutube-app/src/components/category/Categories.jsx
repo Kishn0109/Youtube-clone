@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { Scrollbars } from 'react-custom-scrollbars';
 import axios from 'axios';
 import "./category.scss"
+import { ytkey } from "../../secret"
 function Categories() {
   const [categories, setcategories] = useState([]);
   const [currcategory, setcurentcategory] = useState("All");
   useEffect(() => {
-    axios.get("https://youtube.googleapis.com/youtube/v3/videoCategories?part=snippet&regionCode=US&key=AIzaSyAzEgB0GDX2bcSZ9gahsSEwRUO5EmZSfVE").then((resposnse) => {
+    axios.get(`https://youtube.googleapis.com/youtube/v3/videoCategories?part=snippet&regionCode=US&key=${ytkey}`).then((resposnse) => {
       let Allcategoryobj = {
         etag: "grPOPYEUUZN3ltuDUGEWlrTR90U",
         id: "102929292",
