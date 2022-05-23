@@ -2,14 +2,13 @@ import "./App.css";
 import "./app.scss";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import {
-  BrowserRouter,
   Routes,
   Route,
   Navigate,
 } from "react-router-dom";
 import Header from "./components/header/Header";
 import Sidbar from "./components/sidbar/Sidbar";
-import { Container } from "react-bootstrap";
+// import { Container } from "react-bootstrap";
 import HomeScreen from "./Screens/HomeScreen/HomeScreen";
 import { useEffect, useState } from "react";
 import Login from "./Screens/LoginScreen/Login";
@@ -41,11 +40,12 @@ function App() {
   const navigate = useNavigate();
   const { accestoken, loading } = useSelector(state => state.user)
   useEffect(() => {
-    // console.log(accestoken == null, JSON.parse(accestoken) )
-    accestoken==='null' && !loading && navigate("/login")
+    console.log(accestoken)
+    accestoken === 'null' || accestoken === null && !loading && navigate("/login")
   }, [accestoken, loading, navigate]);
   return (
     <>
+      {/* {process.env.REACT_APP_YTKEY} */}
       <Routes>
         <Route path="/" element={<Layout >
           <HomeScreen />

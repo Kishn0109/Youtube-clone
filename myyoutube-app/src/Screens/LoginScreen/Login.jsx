@@ -7,9 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCCESS, SET_PROFILE } from '../../feature/user/authType';
 import { useNavigate } from 'react-router-dom';
 export default function Login() {
-    const provider = new GoogleAuthProvider()
+    const provider = new GoogleAuthProvider().addScope("https://www.googleapis.com/auth/youtube.force-ssl")
     const user = useSelector(state => state.user)
-    const navigate=useNavigate()
+    const navigate = useNavigate()
     const dispatch = useDispatch();
     const handellogin = async () => {
         try {
@@ -32,7 +32,7 @@ export default function Login() {
 
     }
     useEffect(() => {
-        user.accestoken !== null && navigate("/")
+        user.accestoken !== null || user.accestoken !== 'null' && navigate("/")
     }, [user.accestoken]);
     return (
         <div className='login-container d-flex justify-content-center align-items-center'>

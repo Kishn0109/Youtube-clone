@@ -1,5 +1,9 @@
 @import "../../Screens/HomeScreen/base.scss";
 .Categories {
+	margin-top: 10vh;
+	.outer div {
+		background-color: transparent !important;
+	}
 	span {
 		background-color: white;
 		margin: 0.2rem;
@@ -9,9 +13,10 @@
 		padding: 0.4rem 0.8rem;
 		position: relative;
 		top: 0.5rem;
-        cursor: pointer;
+		cursor: pointer;
 	}
-    .ActiveSpan{
-        background-color: green;
-    }
+	.ActiveSpan {
+		background-color: black;
+		color: white;
+	}
 }

@@ -1,6 +1,11 @@
 @import "../../Screens/HomeScreen/base.scss";
 .Header__main {
 	height: 10vh;
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 	.header_hambargerIcon {
 		display: none;
 		fill: rgb(32, 29, 29);

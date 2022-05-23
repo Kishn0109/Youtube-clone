@@ -1,8 +1,11 @@
 # Problem and solutions
-1)@material-ui/core --installed material-ui/core seprately 
 
+1)@material-ui/core --installed material-ui/core seprately
+2)accessTokesn handel when its values goes 'null' && null
+3).env not working -> app need restart when new key add in .env file
 
 # Steps
+
 1. project Set up[*]
 2. Home Screen Ui [*]
 3. React Router Setup [*]
@@ -24,13 +27,6 @@
 19. Subscription Screen []
 20. Video of Channel []
 21. CI/CD using github action []
-
-
-
-
-
-
-
 
 # Getting Started with Create React App
 

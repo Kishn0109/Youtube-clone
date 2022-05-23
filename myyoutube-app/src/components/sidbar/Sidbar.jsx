@@ -9,12 +9,13 @@ import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import HomeIcon from "@material-ui/icons/Home";
 import { signOut } from "firebase/auth";
 import { auth } from "../../secret";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { userauth } from "../../feature/user/userSlice";
 function Sidbar({ toggelSidebar, toggelfunction }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const Homevideos = useSelector(state => state.Homemovie);
   const logout = async () => {
     try {
       await signOut(auth);
@@ -27,13 +28,14 @@ function Sidbar({ toggelSidebar, toggelfunction }) {
       console.log(error)
     }
   }
+  console.log(process.env)
   return (
     <div
       onClick={() => toggelfunction()}
       className={toggelSidebar ? "sidbar__main open" : "sidbar__main"}
     >
       <ul className="d-flex flex-column justify-content-center align-items-center">
-        <li>
+        <li onClick={() => { console.log(Homevideos) }}>
           <HomeIcon />
           <span>Home</span>
         </li>
